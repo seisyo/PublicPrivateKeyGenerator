@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'as' => 'index', 'uses' => 'MainController@getIndex'
+]);
+Route::get('generateKeys', [
+    'as' => 'generateKeys', 'uses' => 'MainController@getGenerateKeys'
+]);
