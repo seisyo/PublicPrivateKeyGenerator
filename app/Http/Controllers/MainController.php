@@ -42,7 +42,7 @@ class MainController extends Controller
 
         $zip->close();
 
-        $headers = ['Content-Type' => 'text/csv', 'charset' => 'utf-8'];
+        $headers = ['charset' => 'utf-8'];
         return Response::download('../storage/keys.zip', 'keys.zip', $headers);
     }
 }
